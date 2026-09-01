@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test Page — Zoom & HiDPI Scale</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 40px;
+        background: #f8fafc;
+      }
+      .fine-grid {
+        display: grid;
+        grid-template-columns: repeat(10, 40px);
+        grid-template-rows: repeat(10, 40px);
+        gap: 2px;
+        margin-top: 20px;
+      }
+      .cell {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 9px;
+        font-family: monospace;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Zoom & HiDPI Scale Test</h1>
+    <p>
+      Zoom the browser to 80%, 125%, 150%, or 200% and test 1x1 pixel sampling
+      accuracy.
+    </p>
+
+    <div class="fine-grid">
+      <!-- Generated checkerboard cells -->
+      <script>
+        const colors = ["#e11d48", "#2563eb", "#059669", "#d97706", "#7c3aed"];
+        for (let i = 0; i < 100; i++) {
+          const c = colors[i % colors.length];
+          document.write(
+            `<div class="cell" style="background:${c}">${i}</div>`,
+          );
+        }
+      </script>
+    </div>
+  </body>
+</html>

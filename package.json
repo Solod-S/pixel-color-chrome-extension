@@ -1,0 +1,36 @@
+{
+  "name": "pixel-color-chrome-extension",
+  "version": "1.0.0",
+  "description": "Pixel Color — Color Picker, Eyedropper, Palette & CSS Gradient Tools for Chrome",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/build.js",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "package": "node scripts/package.js"
+  },
+  "keywords": [
+    "color-picker",
+    "eyedropper",
+    "chrome-extension",
+    "manifest-v3",
+    "palette",
+    "gradient"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "lucide-react": "^1.16.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "archiver": "^7.0.1",
+    "jsdom": "^26.0.0",
+    "vite": "^6.2.0",
+    "vitest": "^3.0.7"
+  }
+}

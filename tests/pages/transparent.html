@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test Page — Transparent & Blended Elements</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 40px;
+        background: #f8fafc;
+        color: #0f172a;
+      }
+      .stack {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        background: #2563eb;
+        border-radius: 8px;
+        margin-top: 20px;
+      }
+      .layer1 {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 140px;
+        height: 140px;
+        background: rgba(239, 68, 68, 0.6);
+        border-radius: 8px;
+      }
+      .layer2 {
+        position: absolute;
+        top: 60px;
+        left: 80px;
+        width: 140px;
+        height: 100px;
+        background: rgba(234, 179, 8, 0.7);
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Composited Alpha Transparency Test Page</h1>
+    <p>
+      Verifies pixel raster eyedropper sampling on layered semi-transparent
+      alpha blended elements.
+    </p>
+
+    <div class="stack">
+      <div class="layer1"></div>
+      <div class="layer2"></div>
+    </div>
+  </body>
+</html>

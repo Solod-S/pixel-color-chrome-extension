@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test Page — Solid Colors</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 40px;
+        background: #f8fafc;
+        color: #0f172a;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin-top: 20px;
+      }
+      .box {
+        height: 120px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: monospace;
+        font-weight: bold;
+        font-size: 16px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Solid Colors Test Page</h1>
+    <p>Use Pixel Color eyedropper to verify exact color values.</p>
+
+    <div class="grid">
+      <div class="box" style="background-color: #ff0000; color: white">
+        #FF0000 (Red)
+      </div>
+      <div class="box" style="background-color: #00ff00; color: black">
+        #00FF00 (Green)
+      </div>
+      <div class="box" style="background-color: #0000ff; color: white">
+        #0000FF (Blue)
+      </div>
+      <div class="box" style="background-color: #ffff00; color: black">
+        #FFFF00 (Yellow)
+      </div>
+
+      <div class="box" style="background-color: #00ffff; color: black">
+        #00FFFF (Cyan)
+      </div>
+      <div class="box" style="background-color: #ff00ff; color: white">
+        #FF00FF (Magenta)
+      </div>
+      <div class="box" style="background-color: #000000; color: white">
+        #000000 (Black)
+      </div>
+      <div
+        class="box"
+        style="background-color: #ffffff; color: black; border: 1px solid #ccc"
+      >
+        #FFFFFF (White)
+      </div>
+
+      <div class="box" style="background-color: #e7483f; color: white">
+        #E7483F (Coral)
+      </div>
+      <div class="box" style="background-color: #3b82f6; color: white">
+        #3B82F6 (Blue 500)
+      </div>
+      <div class="box" style="background-color: #10b981; color: white">
+        #10B981 (Emerald)
+      </div>
+      <div class="box" style="background-color: #8b5cf6; color: white">
+        #8B5CF6 (Purple)
+      </div>
+    </div>
+  </body>
+</html>

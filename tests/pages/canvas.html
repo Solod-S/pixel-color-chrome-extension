@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test Page — HTML5 Canvas</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 40px;
+        background: #f8fafc;
+        color: #0f172a;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HTML5 Canvas Test Page</h1>
+    <p>
+      Tests eyedropper raster sampling on a canvas element that cannot be parsed
+      by getComputedStyle alone.
+    </p>
+
+    <canvas
+      id="myCanvas"
+      width="400"
+      height="200"
+      style="background: #ffffff; border-radius: 8px; border: 1px solid #e2e8f0"
+    ></canvas>
+
+    <script>
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+
+      // Draw gradients and shapes
+      const grad = ctx.createLinearGradient(0, 0, 400, 0);
+      grad.addColorStop(0, "#f43f5e");
+      grad.addColorStop(0.5, "#a855f7");
+      grad.addColorStop(1, "#06b6d4");
+
+      ctx.fillStyle = grad;
+      ctx.fillRect(20, 20, 360, 60);
+
+      ctx.fillStyle = "#f59e0b";
+      ctx.beginPath();
+      ctx.arc(80, 140, 35, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.fillStyle = "#10b981";
+      ctx.fillRect(160, 110, 80, 60);
+
+      ctx.fillStyle = "#3b82f6";
+      ctx.font = "bold 22px sans-serif";
+      ctx.fillText("Pixel Color Canvas", 260, 145);
+    </script>
+  </body>
+</html>

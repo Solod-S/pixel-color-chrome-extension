@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Pixel Color — Color Picker & Eyedropper",
+  "version": "1.0.0",
+  "description": "Pick colors from webpages, inspect pixels, analyze palettes and generate modern CSS gradients.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Pixel Color",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "src/background/service-worker.js",
+    "type": "module"
+  },
+  "permissions": ["activeTab", "scripting", "storage"],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "commands": {
+    "start-picker": {
+      "suggested_key": {
+        "default": "Alt+P",
+        "mac": "Alt+P"
+      },
+      "description": "Start Pixel Color Picker"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*", "src/picker/*", "src/analyzer/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

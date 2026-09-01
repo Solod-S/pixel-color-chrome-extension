@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test Page — Video Elements</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 40px;
+        background: #f8fafc;
+        color: #0f172a;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Video Snapshot Test Page</h1>
+    <p>
+      Tests eyedropper sampling on rendered video frames and dynamic canvas
+      streams.
+    </p>
+
+    <canvas
+      id="videoCanvas"
+      width="400"
+      height="240"
+      style="border-radius: 8px; border: 1px solid #cbd5e1; display: block"
+    ></canvas>
+
+    <script>
+      const cvs = document.getElementById("videoCanvas");
+      const ctx = cvs.getContext("2d");
+      let frame = 0;
+
+      function render() {
+        frame++;
+        const hue = frame % 360;
+        ctx.fillStyle = `hsl(${hue}, 70%, 50%)`;
+        ctx.fillRect(0, 0, 400, 240);
+
+        ctx.fillStyle = "#ffffff";
+        ctx.font = "bold 20px monospace";
+        ctx.fillText(`Simulated Video Frame ${frame}`, 40, 120);
+        requestAnimationFrame(render);
+      }
+      render();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test Page — SVG Vectors</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 40px;
+        background: #f8fafc;
+        color: #0f172a;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SVG Vectors Test Page</h1>
+    <p>
+      Test pixel sampling and DOM Analyzer extraction on SVG fills and strokes.
+    </p>
+
+    <svg
+      width="400"
+      height="200"
+      style="
+        background: #ffffff;
+        border-radius: 8px;
+        border: 1px solid #e2e8f0;
+        padding: 20px;
+      "
+    >
+      <circle
+        cx="60"
+        cy="80"
+        r="40"
+        fill="#EF4444"
+        stroke="#7F1D1D"
+        stroke-width="4"
+      />
+      <rect
+        x="130"
+        y="40"
+        width="80"
+        height="80"
+        fill="#3B82F6"
+        stroke="#1D4ED8"
+        stroke-width="4"
+        rx="10"
+      />
+      <polygon
+        points="280,40 330,120 230,120"
+        fill="#10B981"
+        stroke="#047857"
+        stroke-width="4"
+      />
+      <path
+        d="M 50 160 Q 200 130 350 160"
+        stroke="#8B5CF6"
+        stroke-width="6"
+        fill="none"
+      />
+    </svg>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test Page — Long Scroll Recapture</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 40px;
+        background: #f8fafc;
+        color: #0f172a;
+      }
+      .section {
+        height: 600px;
+        margin-bottom: 40px;
+        padding: 30px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Long Scroll Recapture Test Page</h1>
+    <p>
+      Scroll down while picker is active to verify debounced recapture without
+      overlay artifacts.
+    </p>
+
+    <div class="section" style="background: #ef4444">
+      Section 1 — Crimson (#EF4444)
+    </div>
+    <div class="section" style="background: #3b82f6">
+      Section 2 — Azure Blue (#3B82F6)
+    </div>
+    <div class="section" style="background: #10b981">
+      Section 3 — Emerald Green (#10B981)
+    </div>
+    <div class="section" style="background: #8b5cf6">
+      Section 4 — Violet Purple (#8B5CF6)
+    </div>
+  </body>
+</html>
